@@ -729,3 +729,119 @@ footer a:hover {
 .contact-info-container {
   animation: fadeIn 0.6s ease-out forwards;
 }
+
+/* Theme toggle button styles */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.2s;
+}
+.theme-toggle-btn:focus {
+  outline: 2px solid #888;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background: #181818;
+  color: #f1f1f1;
+}
+body.dark-theme .nav-links a,
+body.dark-theme .logo,
+body.dark-theme .title,
+body.dark-theme .section__text__p1,
+body.dark-theme .section__text__p2 {
+  color: #f1f1f1;
+}
+body.dark-theme .details-container,
+body.dark-theme .color-container {
+  background: #232323;
+  color: #f1f1f1;
+  border-color: #333;
+}
+body.dark-theme .btn,
+body.dark-theme .btn-color-1,
+body.dark-theme .btn-color-2 {
+  background: #333;
+  color: #f1f1f1;
+  border-color: #444;
+}
+body.dark-theme .icon {
+  filter: brightness(0.8) invert(0.8);
+}
+body.dark-theme footer {
+  background: #181818;
+  color: #aaa;
+}
+
+/* Nav actions container for nav links and theme toggle */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-actions .theme-toggle-btn {
+  margin-left: 1.5rem;
+}
+
+/* Horizontally scrollable projects section */
+.projects-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+  scroll-behavior: smooth;
+}
+.projects-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+.projects-scroll::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+.projects-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.details-container.color-container {
+  min-width: 320px;
+  max-width: 350px;
+  flex: 0 0 auto;
+}
+@media (max-width: 900px) {
+  .details-container.color-container {
+    min-width: 260px;
+    max-width: 300px;
+  }
+  .projects-scroll {
+    gap: 1rem;
+  }
+}
+
+/* Horizontally scrollable open source section */
+.opensource-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+  scroll-behavior: smooth;
+}
+.opensource-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+.opensource-scroll::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+.opensource-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Card sizing already handled by .details-container.color-container */
+@media (max-width: 900px) {
+  .opensource-scroll {
+    gap: 1rem;
+  }
+}

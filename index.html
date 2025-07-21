@@ -11,16 +11,16 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXEMM4SXK1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-
       gtag('config', 'G-TXEMM4SXK1');
     </script>
   </head>
   <body>
+    <!-- ======= Navigation ======= -->
     <nav id="desktop-nav">
       <div class="logo">Apurva Banka</div>
-      <div>
+      <div class="nav-actions">
         <ul class="nav-links">
           <li><a href="#profile">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -29,12 +29,13 @@
           <li><a href="#open-source">Open Source</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" aria-label="Toggle dark and light theme" class="theme-toggle-btn">🌙</button>
       </div>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Apurva Banka</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+      <div class="hamburger-menu nav-actions">
+        <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Open menu" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
@@ -47,8 +48,11 @@
           <li><a href="#open-source" onclick="toggleMenu()">Open Source</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
+        <button id="theme-toggle-mobile" aria-label="Toggle dark and light theme" class="theme-toggle-btn">🌙</button>
       </div>
     </nav>
+
+    <!-- ======= Profile Section ======= -->
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.jpg" alt="Apurva Banka profile picture" style="border-radius: 100%;" />
@@ -58,65 +62,43 @@
         <h1 class="title">Apurva Banka</h1>
         <p class="section__text__p2">Full-stack Developer</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Banka_Apurva_Resume.pdf')"
-          >
+          <button class="btn btn-color-2" onclick="window.open('./assets/Banka_Apurva_Resume.pdf')" aria-label="Download CV">
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1" onclick="location.href='./#contact'" aria-label="Contact Info">
             Contact Info
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/apurva-banka-301158173/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/apurvabanka'"
-          />
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/apurva-banka-301158173/'" tabindex="0" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/apurvabanka'" tabindex="0" />
         </div>
       </div>
     </section>
+
+    <!-- ======= About Section ======= -->
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
+          <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Experience</h3>
               <p>4+ years <br />Full-stack Development @optum, UHG</p>
             </div>
             <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
               <h3>Education</h3>
               <p>B.Tech from PES University<br />M.S from University at Buffalo</p>
             </div>
           </div>
           <div class="text-container">
+            <br>
             <p>
               I am a Computer Science Graduate student at SUNY Buffalo with 4+ years of experience in full-stack
               development, data engineering and microservices. I am an active open-source contributor. I am a Fitness
@@ -125,71 +107,49 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" tabindex="0" />
     </section>
+
+    <!-- ======= Experience Section ======= -->
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
+          <!-- Languages -->
           <div class="details-container">
             <h2 class="experience-sub-title">Languages</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Python</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Java</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>C++</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>JavaScript</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Dart</h3>
                   <p>Experienced</p>
@@ -197,59 +157,40 @@
               </article>
             </div>
           </div>
+          <!-- Full-stack Development -->
           <div class="details-container">
             <h2 class="experience-sub-title">Full-stack Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Django</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Springboot</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Flutter</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>FastAPI</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Firebase</h3>
                   <p>Intermediate</p>
@@ -257,59 +198,40 @@
               </article>
             </div>
           </div>
+          <!-- Cloud & Devops -->
           <div class="details-container">
             <h2 class="experience-sub-title">Cloud & Devops</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>AWS</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Azure</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>GCD</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Kubernetes</h3>
                   <p>Basic</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Docker</h3>
                   <p>Experienced</p>
@@ -317,59 +239,40 @@
               </article>
             </div>
           </div>
+          <!-- Databases & Big Data -->
           <div class="details-container">
             <h2 class="experience-sub-title">Databases & Big Data</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Snowflake</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Spark</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>MongoDB</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>PostgresSQL</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>EMR</h3>
                   <p>Experienced</p>
@@ -377,59 +280,40 @@
               </article>
             </div>
           </div>
+          <!-- Monitoring & Logging -->
           <div class="details-container">
             <h2 class="experience-sub-title">Monitoring & Logging</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Snow-sight</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Grafana</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Selenium</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Confluence</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Streamlit</h3>
                   <p>Experienced</p>
@@ -437,59 +321,40 @@
               </article>
             </div>
           </div>
+          <!-- Tools & OS -->
           <div class="details-container">
             <h2 class="experience-sub-title">Tools & OS</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Git</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Ubuntu</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Linux</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>macOS</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Windows</h3>
                   <p>Experienced</p>
@@ -499,25 +364,43 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" tabindex="0" />
     </section>
+
+    <!-- ======= Projects Section ======= -->
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
+        <div class="projects-scroll">
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./assets/willow_logo.png" alt="InsightQuery project screenshot" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Willow Referrals</h2>
+            <p>
+              Willow is an AI-powered referral platform built to help businesses turn
+              their loyal customers into their most powerful marketing channel. Whether
+              you're a growing startup or an established brand, Willow simplifies campaign
+              creation through intelligent chat, making it easy to launch, share, and track
+              referral programs in minutes — not hours. Combining smart automation with
+              human connection, Willow helps you drive real growth while rewarding the people
+              who already love your brand.
+            </p>
+            <p>&nbsp;</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.willowreferrals.com/'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.willowreferrals.com/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <!-- Project 1 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-2.png" alt="InsightQuery project screenshot" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">InsightQuery</h2>
             <p>
@@ -526,29 +409,20 @@
               Integrated LLaMA improving efficiency and accessibility of AI-powered insights.
               Developed and deployed the app using Streamlit creating interactive plots and graphs.
             </p>
-              <p>&nbsp;</p>
+            <p>&nbsp;</p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/apurvabanka/InsightQuery'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/apurvabanka/InsightQuery'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/apurvabanka/InsightQuery'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/apurvabanka/InsightQuery'">
                 Live Demo
               </button>
             </div>
           </div>
+          <!-- Project 2 -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/forecastor.svg"
-                alt="Project 2"
-                class="project-img"
-              />
+              <img src="./assets/forecastor.svg" alt="Forecastor project screenshot" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">Forecastor</h2>
             <p>
@@ -559,27 +433,18 @@
             </p>
             <p>&nbsp;</p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/apurvabanka/Forcaster'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/apurvabanka/Forcaster'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://data-analysis-food-delivery-dataset.onrender.com/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://data-analysis-food-delivery-dataset.onrender.com/'">
                 Live Demo
               </button>
             </div>
           </div>
+          <!-- Project 3 -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/instant_delivery.svg"
-                alt="Project 3"
-                class="project-img"
-              />
+              <img src="./assets/instant_delivery.svg" alt="Instant Delivery project screenshot" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">Instant Delivery</h2>
             <p>
@@ -590,41 +455,29 @@
             </p>
             <p>&nbsp;</p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/apurvabanka/instant_delivery_app'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/apurvabanka/instant_delivery_app'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/apurvabanka/instant_delivery_app'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/apurvabanka/instant_delivery_app'">
                 Live Demo
               </button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" tabindex="0" />
     </section>
+
+    <!-- ======= Open Source Section ======= -->
     <section id="open-source">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Open-Source Contributions</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
+        <div class="opensource-scroll">
+          <!-- Open Source 1 -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./assets/project-1.png" alt="FastKML project screenshot" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">FastKML</h2>
             <p>
@@ -633,29 +486,20 @@
               write and read KML files as well as the time you spend to get acquainted to the library
               or to create KML objects.
             </p>
-              <p>&nbsp;</p>
+            <p>&nbsp;</p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/cleder/fastkml'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/cleder/fastkml'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/cleder/fastkml/pulls?q=is%3Apr+author%3Aapurvabanka+is%3Aclosed'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/cleder/fastkml/pulls?q=is%3Apr+author%3Aapurvabanka+is%3Aclosed'">
                 Merged PRs
               </button>
             </div>
           </div>
+          <!-- Open Source 2 -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+              <img src="./assets/project-2.png" alt="Code Thesaur project screenshot" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">Code Thesaur</h2>
             <p>
@@ -666,27 +510,18 @@
             </p>
             <p>&nbsp;</p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codethesaurus/codethesaur.us'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/codethesaurus/codethesaur.us'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/codethesaurus/codethesaur.us/pulls?q=is%3Apr+is%3Aclosed+author%3Aapurvabanka'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/codethesaurus/codethesaur.us/pulls?q=is%3Apr+is%3Aclosed+author%3Aapurvabanka'">
                 Merged PRs
               </button>
             </div>
           </div>
+          <!-- Open Source 3 -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
+              <img src="./assets/project-3.png" alt="RagBot project screenshot" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">RagBot</h2>
             <p>
@@ -696,59 +531,40 @@
             </p>
             <p>&nbsp;</p>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/UB-AICLUB/RagBot'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/UB-AICLUB/RagBot'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/UB-AICLUB/RagBot/pulls?q=is%3Apr+is%3Aclosed+author%3Aapurvabanka'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/UB-AICLUB/RagBot/pulls?q=is%3Apr+is%3Aclosed+author%3Aapurvabanka'">
                 Merged PRs
               </button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" tabindex="0" />
     </section>
+
+    <!-- ======= Contact Section ======= -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
           <p><a href="mailto:appu.banka@gmail.com">appu.banka@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
           <p><a href="https://www.linkedin.com/in/apurva-banka-301158173/">LinkedIn</a></p>
         </div>
         <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-            <p><a href="tel:+17165109344">+1 7165109344</a></p>
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="tel:+17165109344">+1 7165109344</a></p>
         </div>
       </div>
     </section>
+
+    <!-- ======= Footer ======= -->
     <footer>
       <nav>
         <div class="nav-links-container">
